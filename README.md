@@ -127,7 +127,7 @@ E-Commerce-Backend-API/
 └── package.json         # Project manifests listing explicit script directives and dependencies-e "
 
 
-🔗 **Live Repository:** [github.com/YOUR_GITHUB_USERNAME/E-Commerce-Backend-API](https://github.com/anassherifkamal/E-Commerce-Backend-API)
+🔗 **Live Repository:** (https://github.com/anassherifkamal/E-Commerce-Backend-API)
 
 
 <!-- Final Review Verification: Clean Build Pass -->" 
