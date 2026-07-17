@@ -102,10 +102,10 @@ Create a .env file in the root directory and add the following keys.
 | POST | /api/orders | Checkout: Convert active cart contents into an order using flat shipping details |
 | PATCH | /api/orders/:id/status | Update fulfillment state (pending, shipped, delivered, etc.) |
 
----
 
 ## 📂 Project Structure
 
+```text
 E-Commerce-Backend-API/
 ├── config/              # Database configurations and environment connection settings
 ├── controllers/         # Request handling logic, input validation, and business workflow
@@ -119,5 +119,3 @@ E-Commerce-Backend-API/
 ├── app.js               # Primary application file bootstrapping middleware and global error hooks
 ├── server.js            # Entry point establishing DB connections and starting listeners
 └── package.json         # Project manifests listing explicit script directives and dependencies
-
----
