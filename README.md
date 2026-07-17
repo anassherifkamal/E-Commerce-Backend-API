@@ -118,4 +118,10 @@ E-Commerce-Backend-API/
 ├── .gitignore           # Prevents security credentials and node_modules tracking
 ├── app.js               # Primary application file bootstrapping middleware and global error hooks
 ├── server.js            # Entry point establishing DB connections and starting listeners
-└── package.json         # Project manifests listing explicit script directives and dependencies-e "\n<!-- Final Review Verification: Clean Build Pass -->" 
+└── package.json         # Project manifests listing explicit script directives and dependencies-e "
+
+
+🔗 **Live Repository:** [github.com/YOUR_GITHUB_USERNAME/E-Commerce-Backend-API](https://github.com/anassherifkamal/E-Commerce-Backend-API)
+
+
+<!-- Final Review Verification: Clean Build Pass -->" 
