@@ -38,11 +38,12 @@ exports.getAll = asyncHandler(async (req, res, next) => {
   const products = await Product.find(filterQuery).populate('category', 'name');
 
   res.status(200).json({
-    status: 'success',
-    message: 'Products retrieved successfully',
-    results: products.length,
-    data: products
-  });
+  status: 'success',
+  message: 'Products retrieved successfully',
+  data: {
+    products: products
+  }
+});
 });
 
 // GET /api/products/:id — fetch single product with full category details
