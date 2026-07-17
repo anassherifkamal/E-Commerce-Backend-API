@@ -1,0 +1,1529 @@
+{
+  "info": {
+    "_postman_id": "38bc179c-8888-4c12-aeac-52532d9369c3",
+    "name": "E-Commerce API",
+    "description": "Complete API documentation for EYouth Level 4 E-Commerce Backend API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55898009",
+    "_collection_link": "https://go.postman.co/collection/55898009-38bc179c-8888-4c12-aeac-52532d9369c3?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "Get All Categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/categories",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "categories"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get All Categories",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/categories",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "categories"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "644"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"284-aOpYLdnlJJ4PFRJmplxQziqsIEA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 09:18:02 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"_id\": \"6a59f0ae7797ed7f14231688\",\n            \"name\": \"Electronics\",\n            \"description\": \"Gadgets, computers, and tech gear\",\n            \"createdAt\": \"2026-07-17T09:06:54.434Z\",\n            \"updatedAt\": \"2026-07-17T09:06:54.434Z\",\n            \"slug\": \"electronics\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a59f0ae7797ed7f14231689\",\n            \"name\": \"Books\",\n            \"description\": \"Literature, novels, and textbooks\",\n            \"createdAt\": \"2026-07-17T09:06:54.436Z\",\n            \"updatedAt\": \"2026-07-17T09:06:54.436Z\",\n            \"slug\": \"books\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a59f0ae7797ed7f1423168a\",\n            \"name\": \"Clothing\",\n            \"description\": \"Apparel, shoes, and fashion\",\n            \"createdAt\": \"2026-07-17T09:06:54.437Z\",\n            \"updatedAt\": \"2026-07-17T09:06:54.437Z\",\n            \"slug\": \"clothing\",\n            \"__v\": 0\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Category by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/categories/:id",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "categories",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "YOUR_CATEGORY_ID_HERE"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Category by ID",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/categories/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "categories",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "6a59f0ae7797ed7f14231689"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "228"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"e4-tJFDAKkHZBmpr9sRvtXPT6p5kIo\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 09:19:16 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"_id\": \"6a59f0ae7797ed7f14231689\",\n        \"name\": \"Books\",\n        \"description\": \"Literature, novels, and textbooks\",\n        \"createdAt\": \"2026-07-17T09:06:54.436Z\",\n        \"updatedAt\": \"2026-07-17T09:06:54.436Z\",\n        \"slug\": \"books\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create Category",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Electronics\",\n  \"description\": \"Tech stuff\"\n}"
+            },
+            "url": {
+              "raw": "{{url}}/categories",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "categories"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Category",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Home Appliances\",\n  \"description\": \"Refrigerators, blenders, microwave ovens, and dynamic home kitchen tools.\"\n}"
+                },
+                "url": {
+                  "raw": "{{url}}/categories",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "categories"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "288"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"120-LzVgIKHw6BsM2t2cdS9kJ1bvmM8\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 09:20:47 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"name\": \"Home Appliances\",\n        \"description\": \"Refrigerators, blenders, microwave ovens, and dynamic home kitchen tools.\",\n        \"_id\": \"6a59f3efc26f811d2282ae6c\",\n        \"createdAt\": \"2026-07-17T09:20:47.749Z\",\n        \"updatedAt\": \"2026-07-17T09:20:47.749Z\",\n        \"slug\": \"home-appliances\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Category",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Smart Electronics\",\n  \"description\": \"Upgraded tech stuff\"\n}"
+            },
+            "url": {
+              "raw": "{{url}}/categories/:id",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "categories",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "YOUR_CATEGORY_ID_HERE"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Category",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Smart Electronics\"\n}"
+                },
+                "url": {
+                  "raw": "{{url}}/categories/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "categories",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "6a59f6116de67501be008d02"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "252"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"fc-VGPUP2dqYNmSZl6MoRAcHoAYTlM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 09:30:33 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"_id\": \"6a59f6116de67501be008d02\",\n        \"name\": \"Smart Electronics\",\n        \"description\": \"Gadgets, computers, and tech gear\",\n        \"createdAt\": \"2026-07-17T09:29:53.602Z\",\n        \"updatedAt\": \"2026-07-17T09:30:33.872Z\",\n        \"slug\": \"smart-electronics\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Category",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/categories/:id",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "categories",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "YOUR_CATEGORY_ID_HERE"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete Category",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/categories/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "categories",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "6a59f61b285def4abfe73e2b"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "32"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"20-bff5r/a5MyNNWy9hjn8a8pOLDxA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 09:33:00 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"data\": null\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "Get All Products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/products",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get All Products",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/products",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "products"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "2028"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"7ec-q2MpupD/JF9JyHM6potucIl4QFs\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 17:51:53 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Products retrieved successfully\",\n    \"results\": 6,\n    \"data\": [\n        {\n            \"_id\": \"6a59f6116de67501be008d06\",\n            \"name\": \"Wireless Mouse\",\n            \"description\": \"Ergonomic 2.4G optical wireless mouse\",\n            \"price\": 25,\n            \"stock\": 50,\n            \"category\": {\n                \"_id\": \"6a59f6116de67501be008d02\",\n                \"name\": \"Smart Electronics\"\n            },\n            \"images\": [],\n            \"inStock\": true,\n            \"createdAt\": \"2026-07-17T09:29:53.620Z\",\n            \"updatedAt\": \"2026-07-17T09:29:53.620Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a59f6116de67501be008d05\",\n            \"name\": \"HP Laptop\",\n            \"description\": \"High-performance laptop for work and gaming\",\n            \"price\": 5000,\n            \"stock\": 10,\n            \"category\": {\n                \"_id\": \"6a59f6116de67501be008d02\",\n                \"name\": \"Smart Electronics\"\n            },\n            \"images\": [\n                \"laptop1.jpg\",\n                \"laptop2.jpg\"\n            ],\n            \"inStock\": true,\n            \"createdAt\": \"2026-07-17T09:29:53.620Z\",\n            \"updatedAt\": \"2026-07-17T09:29:53.620Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a59f6116de67501be008d07\",\n            \"name\": \"Oliver Twist\",\n            \"description\": \"Classic literature novel by Charles Dickens\",\n            \"price\": 15,\n            \"stock\": 5,\n            \"category\": {\n                \"_id\": \"6a59f6116de67501be008d03\",\n                \"name\": \"Books\"\n            },\n            \"images\": [],\n            \"inStock\": true,\n            \"createdAt\": \"2026-07-17T09:29:53.621Z\",\n            \"updatedAt\": \"2026-07-17T09:29:53.621Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a59f6116de67501be008d08\",\n            \"name\": \"Introduction to Algorithms\",\n            \"description\": \"Essential textbook on computer science algorithms\",\n            \"price\": 95,\n            \"stock\": 12,\n            \"category\": {\n                \"_id\": \"6a59f6116de67501be008d03\",\n                \"name\": \"Books\"\n            },\n            \"images\": [],\n            \"inStock\": true,\n            \"createdAt\": \"2026-07-17T09:29:53.621Z\",\n            \"updatedAt\": \"2026-07-17T09:29:53.621Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a59f6116de67501be008d09\",\n            \"name\": \"Winter Jacket\",\n            \"description\": \"Warm windproof outdoor heavy coat\",\n            \"price\": 120,\n            \"stock\": 0,\n            \"category\": {\n                \"_id\": \"6a59f6116de67501be008d04\",\n                \"name\": \"Clothing\"\n            },\n            \"images\": [],\n            \"inStock\": false,\n            \"createdAt\": \"2026-07-17T09:29:53.621Z\",\n            \"updatedAt\": \"2026-07-17T09:29:53.621Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a59f6116de67501be008d0a\",\n            \"name\": \"Classic White T-Shirt\",\n            \"description\": \"100% premium organic cotton t-shirt\",\n            \"price\": 18,\n            \"stock\": 150,\n            \"category\": {\n                \"_id\": \"6a59f6116de67501be008d04\",\n                \"name\": \"Clothing\"\n            },\n            \"images\": [],\n            \"inStock\": true,\n            \"createdAt\": \"2026-07-17T09:29:53.621Z\",\n            \"updatedAt\": \"2026-07-17T09:29:53.621Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Product by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/products/:id",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "products",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "YOUR_PRODUCT_ID_HERE"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Product by ID",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/products/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "products",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "6a59f6116de67501be008d0a"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "432"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1b0-HkrV3w0qHWlEcDq6ZmqRADYGRA8\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 17:52:42 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Product retrieved successfully\",\n    \"data\": {\n        \"_id\": \"6a59f6116de67501be008d0a\",\n        \"name\": \"Classic White T-Shirt\",\n        \"description\": \"100% premium organic cotton t-shirt\",\n        \"price\": 18,\n        \"stock\": 150,\n        \"category\": {\n            \"_id\": \"6a59f6116de67501be008d04\",\n            \"name\": \"Clothing\",\n            \"description\": \"Apparel, shoes, and fashion\"\n        },\n        \"images\": [],\n        \"inStock\": true,\n        \"createdAt\": \"2026-07-17T09:29:53.621Z\",\n        \"updatedAt\": \"2026-07-17T09:29:53.621Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create Product",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Smartphone\",\n  \"description\": \"Latest generation 5G smartphone\",\n  \"price\": 699.99,\n  \"stock\": 50,\n  \"category\": \"YOUR_CATEGORY_ID_HERE\"\n}"
+            },
+            "url": {
+              "raw": "{{url}}/products",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Product",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Smartphone\",\n  \"description\": \"Latest generation 5G smartphone\",\n  \"price\": 700,\n  \"stock\": 50,\n  \"category\": \"6a59f6116de67501be008d02\"\n}"
+                },
+                "url": {
+                  "raw": "{{url}}/products",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "products"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "345"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"159-c3tS6JJ+iAUZ/7hbeGx5RkpWn+M\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 18:00:28 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Product created successfully\",\n    \"data\": {\n        \"name\": \"Smartphone\",\n        \"description\": \"Latest generation 5G smartphone\",\n        \"price\": 700,\n        \"stock\": 50,\n        \"category\": \"6a59f6116de67501be008d02\",\n        \"images\": [],\n        \"inStock\": true,\n        \"_id\": \"6a5a6dbcf1c61962e8087de6\",\n        \"createdAt\": \"2026-07-17T18:00:28.657Z\",\n        \"updatedAt\": \"2026-07-17T18:00:28.657Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Product",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Pro Smartphone\",\n  \"price\": 749.99\n}"
+            },
+            "url": {
+              "raw": "{{url}}/products/:id",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "products",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "YOUR_PRODUCT_ID_HERE"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Product",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Dell laptop\",\n  \"price\": 4000\n}"
+                },
+                "url": {
+                  "raw": "{{url}}/products/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "products",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "6a59f6116de67501be008d05"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "386"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"182-WakvTNTOhZozLRkzoUe+7MvwO0E\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 18:01:48 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Product updated successfully\",\n    \"data\": {\n        \"_id\": \"6a59f6116de67501be008d05\",\n        \"name\": \"Dell laptop\",\n        \"description\": \"High-performance laptop for work and gaming\",\n        \"price\": 4000,\n        \"stock\": 10,\n        \"category\": \"6a59f6116de67501be008d02\",\n        \"images\": [\n            \"laptop1.jpg\",\n            \"laptop2.jpg\"\n        ],\n        \"inStock\": true,\n        \"createdAt\": \"2026-07-17T09:29:53.620Z\",\n        \"updatedAt\": \"2026-07-17T18:01:48.233Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Product",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/products/:id",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "products",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "YOUR_PRODUCT_ID_HERE"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete Product",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/products/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "products",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "6a59f6116de67501be008d0a"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "73"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"49-y+ePxSt0z3f3WS10Rr8CxSWe7ug\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 18:02:29 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Product deleted successfully\",\n    \"data\": null\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cart",
+      "item": [
+        {
+          "name": "Add Product to Cart",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"productId\": \"YOUR_PRODUCT_ID_HERE\",\n  \"quantity\": 1\n}"
+            },
+            "url": {
+              "raw": "{{url}}/cart",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "cart"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Add Product to Cart",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"productId\": \"6a59f6116de67501be008d06\",\n  \"quantity\": 2\n}"
+                },
+                "url": {
+                  "raw": "{{url}}/cart/items",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "cart",
+                    "items"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "340"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"154-oKRULgzONfwOUAD9TCet9d7W4cw\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 18:03:31 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Item added to cart successfully\",\n    \"data\": {\n        \"user\": \"test-session-123\",\n        \"items\": [\n            {\n                \"product\": \"6a59f6116de67501be008d06\",\n                \"quantity\": 2,\n                \"price\": 25,\n                \"_id\": \"6a5a6e73f1c61962e8087de8\"\n            }\n        ],\n        \"totalPrice\": 50,\n        \"_id\": \"6a5a6e73f1c61962e8087de7\",\n        \"createdAt\": \"2026-07-17T18:03:31.534Z\",\n        \"updatedAt\": \"2026-07-17T18:03:31.534Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get User Cart",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/cart",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "cart"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get User Cart",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/cart",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "cart"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "379"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"17b-t47bLEi7gg5GWlOfx0sagXx5kNk\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 18:03:45 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Cart retrieved successfully\",\n    \"data\": {\n        \"_id\": \"6a5a6e73f1c61962e8087de7\",\n        \"user\": \"test-session-123\",\n        \"items\": [\n            {\n                \"product\": {\n                    \"_id\": \"6a59f6116de67501be008d06\",\n                    \"name\": \"Wireless Mouse\",\n                    \"price\": 25\n                },\n                \"quantity\": 2,\n                \"price\": 25,\n                \"_id\": \"6a5a6e73f1c61962e8087de8\"\n            }\n        ],\n        \"totalPrice\": 50,\n        \"createdAt\": \"2026-07-17T18:03:31.534Z\",\n        \"updatedAt\": \"2026-07-17T18:03:31.534Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Cart Item Quantity",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"quantity\": 2\n}"
+            },
+            "url": {
+              "raw": "{{url}}/cart/:itemId",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "cart",
+                ":itemId"
+              ],
+              "variable": [
+                {
+                  "key": "itemId",
+                  "value": "YOUR_CART_ITEM_ID_HERE"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Cart Item Quantity",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"quantity\": 5\n}"
+                },
+                "url": {
+                  "raw": "{{url}}/cart/items/:itemId",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "cart",
+                    "items",
+                    ":itemId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemId",
+                      "value": "6a59f6116de67501be008d06"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "349"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"15d-9Xfq5IWBx9YPWKNUFTKF5nN+K40\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 18:05:09 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Cart item quantity updated successfully\",\n    \"data\": {\n        \"_id\": \"6a5a6e73f1c61962e8087de7\",\n        \"user\": \"test-session-123\",\n        \"items\": [\n            {\n                \"product\": \"6a59f6116de67501be008d06\",\n                \"quantity\": 5,\n                \"price\": 25,\n                \"_id\": \"6a5a6e73f1c61962e8087de8\"\n            }\n        ],\n        \"totalPrice\": 125,\n        \"createdAt\": \"2026-07-17T18:03:31.534Z\",\n        \"updatedAt\": \"2026-07-17T18:05:09.076Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Remove Item from Cart",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/cart/:itemId",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "cart",
+                ":itemId"
+              ],
+              "variable": [
+                {
+                  "key": "itemId",
+                  "value": "YOUR_CART_ITEM_ID_HERE"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Remove Item from Cart",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/cart/items/:itemId",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "cart",
+                    "items",
+                    ":itemId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "itemId",
+                      "value": "6a59f6116de67501be008d06"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "248"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"f8-gRVcUCJfEpVCjaXXeCzlw0U4tTc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 18:05:56 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Item removed from cart successfully\",\n    \"data\": {\n        \"_id\": \"6a5a6e73f1c61962e8087de7\",\n        \"user\": \"test-session-123\",\n        \"items\": [],\n        \"totalPrice\": 0,\n        \"createdAt\": \"2026-07-17T18:03:31.534Z\",\n        \"updatedAt\": \"2026-07-17T18:05:56.033Z\",\n        \"__v\": 1\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Clear Cart",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/cart",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "cart"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Clear Cart",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/cart",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "cart"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "238"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"ee-pOOjy3WFztIbb/9jBNxEmtRlicM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 18:06:04 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Cart cleared successfully\",\n    \"data\": {\n        \"_id\": \"6a5a6e73f1c61962e8087de7\",\n        \"user\": \"test-session-123\",\n        \"items\": [],\n        \"totalPrice\": 0,\n        \"createdAt\": \"2026-07-17T18:03:31.534Z\",\n        \"updatedAt\": \"2026-07-17T18:05:56.033Z\",\n        \"__v\": 1\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Orders",
+      "item": [
+        {
+          "name": "Create Order",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"shippingAddress\": \"123 Tech Street, Cairo\",\n  \"paymentMethod\": \"CASH\"\n}"
+            },
+            "url": {
+              "raw": "{{url}}/orders",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Order",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"street\": \"123 Tech Street\",\n  \"city\": \"Cairo\",\n  \"country\": \"Egypt\"\n}"
+                },
+                "url": {
+                  "raw": "{{url}}/orders",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "orders"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "472"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1d8-6jpwkLNnXWF0sFfJE6rm13hAZmc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 18:13:23 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Order completed successfully!\",\n    \"data\": {\n        \"items\": [\n            {\n                \"product\": \"6a59f6116de67501be008d07\",\n                \"name\": \"Oliver Twist\",\n                \"price\": 15,\n                \"quantity\": 2,\n                \"_id\": \"6a5a70c3f1c61962e8087def\"\n            }\n        ],\n        \"totalPrice\": 30,\n        \"status\": \"pending\",\n        \"shippingAddress\": {\n            \"street\": \"123 Tech Street\",\n            \"city\": \"Cairo\",\n            \"country\": \"Egypt\"\n        },\n        \"_id\": \"6a5a70c3f1c61962e8087dee\",\n        \"orderNumber\": \"ORD-1784312003981-V4O0\",\n        \"createdAt\": \"2026-07-17T18:13:23.982Z\",\n        \"updatedAt\": \"2026-07-17T18:13:23.982Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get User Orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/orders",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get User Orders",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/orders",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "orders"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "474"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1da-kqonyH4fzTiA81zvwvNW526dbxM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 18:13:41 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Orders retrieved successfully\",\n    \"data\": [\n        {\n            \"shippingAddress\": {\n                \"street\": \"123 Tech Street\",\n                \"city\": \"Cairo\",\n                \"country\": \"Egypt\"\n            },\n            \"_id\": \"6a5a70c3f1c61962e8087dee\",\n            \"items\": [\n                {\n                    \"product\": \"6a59f6116de67501be008d07\",\n                    \"name\": \"Oliver Twist\",\n                    \"price\": 15,\n                    \"quantity\": 2,\n                    \"_id\": \"6a5a70c3f1c61962e8087def\"\n                }\n            ],\n            \"totalPrice\": 30,\n            \"status\": \"pending\",\n            \"orderNumber\": \"ORD-1784312003981-V4O0\",\n            \"createdAt\": \"2026-07-17T18:13:23.982Z\",\n            \"updatedAt\": \"2026-07-17T18:13:23.982Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Order by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/orders/:id",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "orders",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "YOUR_ORDER_ID_HERE"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Order by ID",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/orders/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "orders",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "6a5a70c3f1c61962e8087dee"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "471"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1d7-LSbMx20Zq1O7qhE8kX0C6ECU29E\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 18:14:03 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Order retrieved successfully\",\n    \"data\": {\n        \"shippingAddress\": {\n            \"street\": \"123 Tech Street\",\n            \"city\": \"Cairo\",\n            \"country\": \"Egypt\"\n        },\n        \"_id\": \"6a5a70c3f1c61962e8087dee\",\n        \"items\": [\n            {\n                \"product\": \"6a59f6116de67501be008d07\",\n                \"name\": \"Oliver Twist\",\n                \"price\": 15,\n                \"quantity\": 2,\n                \"_id\": \"6a5a70c3f1c61962e8087def\"\n            }\n        ],\n        \"totalPrice\": 30,\n        \"status\": \"pending\",\n        \"orderNumber\": \"ORD-1784312003981-V4O0\",\n        \"createdAt\": \"2026-07-17T18:13:23.982Z\",\n        \"updatedAt\": \"2026-07-17T18:13:23.982Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

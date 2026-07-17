@@ -1,14 +1,14 @@
 const dotenv = require('dotenv');
 const path = require('path');
 
-// Load environment variables from the root .env file
-dotenv.config({ path: path.join(__dirname, '../.env') });
+// This forces Node to look in the absolute root directory of your project for .env
+dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 module.exports = {
   env: process.env.NODE_ENV || 'development',
   port: process.env.PORT || 5000,
   mongoose: {
-    url: process.env.MONGODB_URI,
-    options: {} // You can add database options here if needed later
+    url: process.env.MONGO_URI,
+    options: {} 
   }
 };

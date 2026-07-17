@@ -4,7 +4,7 @@ const connectDB = require('./db/db');
 
 // Import your custom utility errors and handlers
 const AppError = require('./utils/AppError');
-const globalErrorHandler = require('./middleware/errorMiddleware');
+const globalErrorHandler = require('./middleware/errorHandler');
 
 // Initialize the Express app
 const app = express();
@@ -21,8 +21,7 @@ app.use('/api/products', require('./routes/productRoutes'));
 app.use('/api/cart', require('./routes/cartRoutes'));
 app.use('/api/orders', require('./routes/orderRoutes'));
 
-// 4. Handle Undefined Routes (404 Handler)
-app.all('*', (req, res, next) => {
+app.use((req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
 
