@@ -59,11 +59,17 @@ Create a .env file in the root directory and add the following keys.
 
 > ⚠️ **Security Warning:** The .env file contains sensitive local credentials and is automatically ignored by Git using .gitignore. Never commit this file to public repositories.
 
-| Variable | Example Value | Description |
+### 🔑 Environment Variables
+
+Create a `.env` file in the root directory and configure the following variables:
+
+| Variable | Description | Example Value |
 | :--- | :--- | :--- |
-| PORT | 5000 | The port number on which the Express server runs. |
-| MONGO_URI | mongodb://localhost:27017/ecommerce | The connection string for your local or Atlas MongoDB instance. |
-| NODE_ENV | development | Setting this to development reveals verbose backend stack traces for easier debugging. |
+| `PORT` | The local port number the server runs on | `5000` |
+| `MONGO_URI` | Connection string for MongoDB database instances | `mongodb://localhost:27017/ecommerce` |
+| `NODE_ENV` | The current operational environment of the running application | `development` |
+| `JWT_SECRET` | Super secure signing key for encoding user login tokens | `your_ultra_secure_long_secret_key_string_here` |
+| `CORS_ORIGIN` | Allowed cross-origin domains permitted to access the API | `http://localhost:3000` |
 
 ---
 

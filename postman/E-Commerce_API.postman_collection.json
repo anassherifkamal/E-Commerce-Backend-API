@@ -592,6 +592,217 @@
           ]
         },
         {
+          "name": "Filter Products by Price Range",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/categories",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "categories"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Filter Products by Price Range",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/products?minPrice=25&maxPrice=200",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "products"
+                  ],
+                  "query": [
+                    {
+                      "key": "minPrice",
+                      "value": "25"
+                    },
+                    {
+                      "key": "maxPrice",
+                      "value": "200"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1047"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"417-IQg+vUdpA3zDwinZ1pRi8CZHwLI\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 20:37:56 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Products retrieved successfully\",\n    \"results\": 3,\n    \"data\": [\n        {\n            \"_id\": \"6a59f6116de67501be008d06\",\n            \"name\": \"Wireless Mouse\",\n            \"description\": \"Ergonomic 2.4G optical wireless mouse\",\n            \"price\": 25,\n            \"stock\": 50,\n            \"category\": {\n                \"_id\": \"6a59f6116de67501be008d02\",\n                \"name\": \"Smart Electronics\"\n            },\n            \"images\": [],\n            \"inStock\": true,\n            \"createdAt\": \"2026-07-17T09:29:53.620Z\",\n            \"updatedAt\": \"2026-07-17T09:29:53.620Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a59f6116de67501be008d08\",\n            \"name\": \"Introduction to Algorithms\",\n            \"description\": \"Essential textbook on computer science algorithms\",\n            \"price\": 95,\n            \"stock\": 12,\n            \"category\": {\n                \"_id\": \"6a59f6116de67501be008d03\",\n                \"name\": \"Books\"\n            },\n            \"images\": [],\n            \"inStock\": true,\n            \"createdAt\": \"2026-07-17T09:29:53.621Z\",\n            \"updatedAt\": \"2026-07-17T09:29:53.621Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a59f6116de67501be008d09\",\n            \"name\": \"Winter Jacket\",\n            \"description\": \"Warm windproof outdoor heavy coat\",\n            \"price\": 120,\n            \"stock\": 0,\n            \"category\": {\n                \"_id\": \"6a59f6116de67501be008d04\",\n                \"name\": \"Clothing\"\n            },\n            \"images\": [],\n            \"inStock\": false,\n            \"createdAt\": \"2026-07-17T09:29:53.621Z\",\n            \"updatedAt\": \"2026-07-17T09:29:53.621Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Filter Products By inStock",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": [
+            {
+              "name": "Filter Products By inStock",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/products?inStock=true",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "products"
+                  ],
+                  "query": [
+                    {
+                      "key": "inStock",
+                      "value": "true"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1716"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"6b4-VP993nE/kboRRumbrof+Nrjd7ZI\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 20:39:36 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Products retrieved successfully\",\n    \"results\": 5,\n    \"data\": [\n        {\n            \"_id\": \"6a59f6116de67501be008d06\",\n            \"name\": \"Wireless Mouse\",\n            \"description\": \"Ergonomic 2.4G optical wireless mouse\",\n            \"price\": 25,\n            \"stock\": 50,\n            \"category\": {\n                \"_id\": \"6a59f6116de67501be008d02\",\n                \"name\": \"Smart Electronics\"\n            },\n            \"images\": [],\n            \"inStock\": true,\n            \"createdAt\": \"2026-07-17T09:29:53.620Z\",\n            \"updatedAt\": \"2026-07-17T09:29:53.620Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a59f6116de67501be008d05\",\n            \"name\": \"Dell laptop\",\n            \"description\": \"High-performance laptop for work and gaming\",\n            \"price\": 4000,\n            \"stock\": 10,\n            \"category\": {\n                \"_id\": \"6a59f6116de67501be008d02\",\n                \"name\": \"Smart Electronics\"\n            },\n            \"images\": [\n                \"laptop1.jpg\",\n                \"laptop2.jpg\"\n            ],\n            \"inStock\": true,\n            \"createdAt\": \"2026-07-17T09:29:53.620Z\",\n            \"updatedAt\": \"2026-07-17T18:01:48.233Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a59f6116de67501be008d07\",\n            \"name\": \"Oliver Twist\",\n            \"description\": \"Classic literature novel by Charles Dickens\",\n            \"price\": 15,\n            \"stock\": 3,\n            \"category\": {\n                \"_id\": \"6a59f6116de67501be008d03\",\n                \"name\": \"Books\"\n            },\n            \"images\": [],\n            \"inStock\": true,\n            \"createdAt\": \"2026-07-17T09:29:53.621Z\",\n            \"updatedAt\": \"2026-07-17T18:13:23.988Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a59f6116de67501be008d08\",\n            \"name\": \"Introduction to Algorithms\",\n            \"description\": \"Essential textbook on computer science algorithms\",\n            \"price\": 95,\n            \"stock\": 12,\n            \"category\": {\n                \"_id\": \"6a59f6116de67501be008d03\",\n                \"name\": \"Books\"\n            },\n            \"images\": [],\n            \"inStock\": true,\n            \"createdAt\": \"2026-07-17T09:29:53.621Z\",\n            \"updatedAt\": \"2026-07-17T09:29:53.621Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a5a6dbcf1c61962e8087de6\",\n            \"name\": \"Smartphone\",\n            \"description\": \"Latest generation 5G smartphone\",\n            \"price\": 700,\n            \"stock\": 50,\n            \"category\": {\n                \"_id\": \"6a59f6116de67501be008d02\",\n                \"name\": \"Smart Electronics\"\n            },\n            \"images\": [],\n            \"inStock\": true,\n            \"createdAt\": \"2026-07-17T18:00:28.657Z\",\n            \"updatedAt\": \"2026-07-17T18:00:28.657Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Filter Products With Search",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": [
+            {
+              "name": "Filter Products With Search",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/products?search=LAPTOP",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "products"
+                  ],
+                  "query": [
+                    {
+                      "key": "search",
+                      "value": "LAPTOP"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "439"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1b7-LsWUzvEafARChpRqHk2ylyk0QgE\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 20:45:31 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Products retrieved successfully\",\n    \"data\": {\n        \"products\": [\n            {\n                \"_id\": \"6a59f6116de67501be008d05\",\n                \"name\": \"Dell laptop\",\n                \"description\": \"High-performance laptop for work and gaming\",\n                \"price\": 4000,\n                \"stock\": 10,\n                \"category\": {\n                    \"_id\": \"6a59f6116de67501be008d02\",\n                    \"name\": \"Smart Electronics\"\n                },\n                \"images\": [\n                    \"laptop1.jpg\",\n                    \"laptop2.jpg\"\n                ],\n                \"inStock\": true,\n                \"createdAt\": \"2026-07-17T09:29:53.620Z\",\n                \"updatedAt\": \"2026-07-17T18:01:48.233Z\",\n                \"__v\": 0\n            }\n        ]\n    }\n}"
+            }
+          ]
+        },
+        {
           "name": "Create Product",
           "request": {
             "method": "POST",
@@ -1520,6 +1731,83 @@
               ],
               "cookie": [],
               "body": "{\n    \"status\": \"success\",\n    \"message\": \"Order retrieved successfully\",\n    \"data\": {\n        \"shippingAddress\": {\n            \"street\": \"123 Tech Street\",\n            \"city\": \"Cairo\",\n            \"country\": \"Egypt\"\n        },\n        \"_id\": \"6a5a70c3f1c61962e8087dee\",\n        \"items\": [\n            {\n                \"product\": \"6a59f6116de67501be008d07\",\n                \"name\": \"Oliver Twist\",\n                \"price\": 15,\n                \"quantity\": 2,\n                \"_id\": \"6a5a70c3f1c61962e8087def\"\n            }\n        ],\n        \"totalPrice\": 30,\n        \"status\": \"pending\",\n        \"orderNumber\": \"ORD-1784312003981-V4O0\",\n        \"createdAt\": \"2026-07-17T18:13:23.982Z\",\n        \"updatedAt\": \"2026-07-17T18:13:23.982Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Order Status",
+          "request": {
+            "method": "PATCH",
+            "header": []
+          },
+          "response": [
+            {
+              "name": "Update Order Status",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"status\": \"confirmed\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/orders/:id/status",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "orders",
+                    ":id",
+                    "status"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "6a5a70c3f1c61962e8087dee"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "478"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1de-9ooDXmmYdvrado7jtyL2dQTY7d0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 20:32:33 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Order status updated successfully\",\n    \"data\": {\n        \"shippingAddress\": {\n            \"street\": \"123 Tech Street\",\n            \"city\": \"Cairo\",\n            \"country\": \"Egypt\"\n        },\n        \"_id\": \"6a5a70c3f1c61962e8087dee\",\n        \"items\": [\n            {\n                \"product\": \"6a59f6116de67501be008d07\",\n                \"name\": \"Oliver Twist\",\n                \"price\": 15,\n                \"quantity\": 2,\n                \"_id\": \"6a5a70c3f1c61962e8087def\"\n            }\n        ],\n        \"totalPrice\": 30,\n        \"status\": \"confirmed\",\n        \"orderNumber\": \"ORD-1784312003981-V4O0\",\n        \"createdAt\": \"2026-07-17T18:13:23.982Z\",\n        \"updatedAt\": \"2026-07-17T20:32:33.006Z\",\n        \"__v\": 0\n    }\n}"
             }
           ]
         }
